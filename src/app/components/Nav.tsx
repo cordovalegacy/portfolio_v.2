@@ -67,9 +67,9 @@ const Nav = () => {
                 ><Insta className="text-2xl hover:text-pink-700 transition duration-300 rounded-lg" />
                 </motion.a>
             </nav>
-            <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+            <nav className="absolute left-[50%] top-2 translate-x-[-50%]">
                 <Logo />
-            </div>
+            </nav>
         </header>
     )
 }
