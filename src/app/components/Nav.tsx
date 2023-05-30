@@ -2,9 +2,15 @@
 
 import Link from "next/link"
 import Logo from "./Logo"
-import { usePathname } from "next/navigation"
+import { usePathname } from "next/navigation" //grabs path from url
 import { log } from "../layout" //custom console.log function exported for all
-import Image from "next/image"
+import { motion } from 'framer-motion'
+
+//! React-Icons
+import { GoMarkGithub as GitHub } from 'react-icons/go'
+import { BsLinkedin as LinkedIn } from 'react-icons/bs'
+import { FaInstagramSquare as Insta } from 'react-icons/fa'
+//! React-Icons
 
 //*type declarations for TSX props
 interface TSXProps {
@@ -18,7 +24,7 @@ const CustomLink: React.FC<TSXProps> = ({ href, title, className = "" }) => {
 
     const pathname = usePathname()
     // log("Path String in Console", pathname) //current path string
-    
+
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
@@ -32,18 +38,34 @@ const CustomLink: React.FC<TSXProps> = ({ href, title, className = "" }) => {
 const Nav = () => {
     return (
         <header className="w-full px-32 py-8 font-medium flex justify-between items-center">
-            <nav className="flex">
+            <nav className="flex items-center">
                 <CustomLink href='/' title="Home" className="mr-4" />
                 <CustomLink href={'/about'} title="About" className="mr-4" />
                 <CustomLink href={'/projects'} title="Projects" className="mr-4" />
-                <CustomLink href={'/articles'} title="Articles" className="mr-4" />
+                <CustomLink href={'/experience'} title="Experience" className="mr-4" />
             </nav>
-            <nav className="flex">
-                <Link href={'/'}></Link>
-                <Link href={'/'}></Link>
-                <Link href={'/'}></Link>
-                <Link href={'/'}></Link>
-                <Link href={'/'}></Link>
+            <nav className="flex items-center justify-center flex-wrap">
+                <motion.a
+                    href="https://github.com/cordovalegacy"
+                    className="ml-6"
+                    whileHover={{y: -4, scale: 1.3}}
+                    whileTap={{ scale: 2.0 }}
+                ><GitHub className="text-xl hover:text-white hover:bg-slate-800 hover:outline hover:brightness-150 rounded-full transition duration-150" />
+                </motion.a>
+                <motion.a
+                    href="https://www.linkedin.com/in/brendan-cordova-2874011ba/"
+                    className="ml-6"
+                    whileHover={{y: -4, scale: 1.3}}
+                    whileTap={{ scale: 2.0 }}
+                ><LinkedIn className="text-xl hover:text-blue-600 transition duration-300 rounded" />
+                </motion.a>
+                <motion.a
+                    href="https://www.instagram.com/legacybuildspc/"
+                    className="ml-6"
+                    whileHover={{y: -4, scale: 1.3}}
+                    whileTap={{ scale: 2.0 }}
+                ><Insta className="text-2xl hover:text-pink-700 transition duration-300 rounded-lg" />
+                </motion.a>
             </nav>
             <div className="absolute left-[50%] top-2 translate-x-[-50%]">
                 <Logo />
