@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.flickering {
+    animation: flickerAnimation 0.7s infinite;
+}

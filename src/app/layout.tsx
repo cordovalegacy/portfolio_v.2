@@ -13,7 +13,7 @@ export const metadata = {
   }
 }
 
-export const log = console.log.bind(console) 
+export const log = console.log.bind(console)  //short hand console.log
 
 export default function RootLayout({
   children, //these are the props

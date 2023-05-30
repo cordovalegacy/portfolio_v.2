@@ -16,6 +16,9 @@ module.exports = {
       },
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans]
+      },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
       }
     },
   },

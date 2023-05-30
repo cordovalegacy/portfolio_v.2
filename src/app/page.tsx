@@ -3,6 +3,8 @@ import HomeLayout from './components/Layout'
 import AnimatedText from './components/AnimatedText'
 import Link from 'next/link'
 import { BsArrowUpRightSquare as Download } from 'react-icons/bs'
+import { FcIdea as Bulb } from 'react-icons/fc'
+import HireMe from './components/HireMe'
 
 
 export default function Home() {
@@ -41,6 +43,8 @@ export default function Home() {
           </div>
         </div>
       </HomeLayout>
+      <HireMe />
+        <Bulb className='absolute bottom-6 right-6 text-[8vw] hover:brightness-125 cursor-pointer flickering'/>
     </main>
   )
 }
