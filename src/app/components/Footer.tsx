@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import HomeLayout from "./Layout"
 import { FaHandPeace as Peace } from 'react-icons/fa'
