@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Nav from './components/Nav'
 import './globals.css'
 import { Montserrat } from 'next/font/google' //fonts
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} font-mont`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   )

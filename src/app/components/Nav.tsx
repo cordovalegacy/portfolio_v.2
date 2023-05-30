@@ -37,7 +37,7 @@ const CustomLink: React.FC<TSXProps> = ({ href, title, className = "" }) => {
 
 const Nav = () => {
     return (
-        <header className="w-full px-32 py-8 font-medium flex justify-between items-center">
+        <header className="w-full h-[10vh] px-32 py-8 font-medium flex justify-between items-center">
             <nav className="flex items-center">
                 <CustomLink href='/' title="Home" className="mr-4" />
                 <CustomLink href={'/about'} title="About" className="mr-4" />
