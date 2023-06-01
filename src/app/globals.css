@@ -20,3 +20,11 @@
 .flickering {
     animation: flickerAnimation 0.7s infinite;
 }
+
+.canvas{
+    width: 1000px;
+}
+
+.canvas img{
+    width: 100%;
+}
