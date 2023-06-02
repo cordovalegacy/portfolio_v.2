@@ -5,6 +5,8 @@ import Logo from "./Logo"
 import { usePathname } from "next/navigation" //grabs path from url
 import { log } from "../layout" //custom console.log function exported for all
 import { motion } from 'framer-motion'
+import { FaSun as Sun, FaRegMoon as Moon } from 'react-icons/fa'
+import { useState } from 'react'
 
 //! React-Icons
 import { GoMarkGithub as GitHub } from 'react-icons/go'
@@ -12,7 +14,7 @@ import { BsLinkedin as LinkedIn } from 'react-icons/bs'
 import { FaInstagramSquare as Insta } from 'react-icons/fa'
 //! React-Icons
 
-//*type declarations for TSX props
+
 interface TSXProps {
     href: string,
     title: string,
@@ -36,37 +38,59 @@ const CustomLink: React.FC<TSXProps> = ({ href, title, className = "" }) => {
 }
 
 const Nav = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const clickHandler = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <header className="w-full h-[10vh] px-32 py-8 font-medium flex justify-between items-center">
-            <nav className="flex items-center">
-                <CustomLink href='/' title="Home" className="mr-4" />
-                <CustomLink href={'/about'} title="About" className="mr-4" />
-                <CustomLink href={'/projects'} title="Projects" className="mr-4" />
-                <CustomLink href={'/experience'} title="Experience" className="mr-4" />
-            </nav>
-            <nav className="flex items-center justify-center flex-wrap">
-                <motion.a
-                    href="https://github.com/cordovalegacy"
-                    className="ml-6"
-                    whileHover={{y: -4, scale: 1.3}}
-                    whileTap={{ scale: 2.0 }}
-                ><GitHub className="text-xl hover:text-white hover:bg-slate-800 hover:outline hover:brightness-150 rounded-full transition duration-150" />
-                </motion.a>
-                <motion.a
-                    href="https://www.linkedin.com/in/brendan-cordova-2874011ba/"
-                    className="ml-6"
-                    whileHover={{y: -4, scale: 1.3}}
-                    whileTap={{ scale: 2.0 }}
-                ><LinkedIn className="text-xl hover:text-blue-600 transition duration-300 rounded" />
-                </motion.a>
-                <motion.a
-                    href="https://www.instagram.com/legacybuildspc/"
-                    className="ml-6"
-                    whileHover={{y: -4, scale: 1.3}}
-                    whileTap={{ scale: 2.0 }}
-                ><Insta className="text-2xl hover:text-pink-700 transition duration-300 rounded-lg" />
-                </motion.a>
-            </nav>
+            <button className="flex flex-col justify-center items-center hidden lg:flex" onClick={clickHandler}>
+                <span className={`${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'} bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm`}></span>
+                <span className={`${isOpen ? 'opacity-0' : 'opacity-100'} bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5`}></span>
+                <span className={`${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'} transition-all duration-300 ease-out bg-black block h-0.5 w-6 rounded-sm`}></span>
+            </button>
+            <div className="w-full flex justify-between items-center lg:hidden">
+                <nav className="flex items-center">
+                    <CustomLink href='/' title="Home" className="mr-4" />
+                    <CustomLink href={'/about'} title="About" className="mr-4" />
+                    <CustomLink href={'/projects'} title="Projects" className="mr-4" />
+                    <CustomLink href={'/experience'} title="Experience" className="mr-4" />
+                </nav>
+                <nav className="flex items-center justify-center flex-wrap">
+                    <motion.a
+                        href="https://github.com/cordovalegacy"
+                        className="ml-6"
+                        whileHover={{ y: -4, scale: 1.3 }}
+                        whileTap={{ scale: 2.0 }}
+                    ><GitHub className="text-xl hover:text-white hover:bg-slate-800 hover:outline hover:brightness-150 rounded-full transition duration-150" />
+                    </motion.a>
+                    <motion.a
+                        href="https://www.linkedin.com/in/brendan-cordova-2874011ba/"
+                        className="ml-6"
+                        whileHover={{ y: -4, scale: 1.3 }}
+                        whileTap={{ scale: 2.0 }}
+                    ><LinkedIn className="text-xl hover:text-blue-600 transition duration-300 rounded" />
+                    </motion.a>
+                    <motion.a
+                        href="https://www.instagram.com/legacybuildspc/"
+                        className="ml-6"
+                        whileHover={{ y: -4, scale: 1.3 }}
+                        whileTap={{ scale: 2.0 }}
+                    ><Insta className="text-2xl hover:text-pink-700 transition duration-300 rounded-lg" />
+                    </motion.a>
+                    {/* <button
+                onClick={() => setMode(mode === "light" ? "dark" : "light")} 
+                className="flex items-center justify-center text-lg ml-6 rounded-full p-1">
+                {mode === "dark" ?
+                <Sun className={"fill-black"}/> :
+                <Moon className={"fill-black"}/>
+            }
+        </button> */}
+                </nav>
+            </div>
             <nav className="absolute left-[50%] top-2 translate-x-[-50%]">
                 <Logo />
             </nav>
