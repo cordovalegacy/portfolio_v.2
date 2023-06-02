@@ -47,7 +47,7 @@ const About = () => {
                         Design is the art of problem-solving and crafting intuitive, delightful user experiences. My number one goal is to shape solutions that go beyond beauty and dedicate myself to produce practical applications that are intuitive and fun to use.
                     </p>
                     <p className="font-medium">
-                        From websites to robust tooling apps, I deliver design excellence and user-centric solutions. Let&apos;'s collaborate on your next digital venture!
+                        From websites to robust tooling apps, I deliver design excellence and user-centric solutions. We should collaborate on your next digital venture!
                     </p>
                 </div>
                 <div className="col-span-3 mt-12 relative h-max rounded-2xl border-2 border-solid border-slate-800">
