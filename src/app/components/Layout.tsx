@@ -5,7 +5,7 @@ interface TSXProps {
 
 const HomeLayout: React.FC<TSXProps> = ({children, className=""}) => {
     return (
-        <div className={`w-full h-full inline-block z-0 bg-white p-32 ${className}`}>
+        <div className={`w-full xs:w-[100vw] h-full inline-block z-0 bg-white p-32 ${className}`}>
             {children}
         </div>
     )

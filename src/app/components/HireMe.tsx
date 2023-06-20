@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const HireMe = () => {
     return (
-        <div className="fixed bottom-0 left-0 flex items-center justify-center overflow-hidden">
+        <div className="fixed bottom-0 left-0 flex items-center justify-center overflow-hidden xs:hidden">
             <div className="w-48 h-auto flex items-center justify-center relative">
                 <Image src={'/circle.png'} width={135} height={135} alt="animated hire me" className="animate-spin-slow" />
                 <Link

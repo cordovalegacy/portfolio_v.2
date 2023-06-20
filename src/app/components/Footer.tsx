@@ -6,7 +6,7 @@ import { FaHandPeace as Peace } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <footer className="w-full h-[10vh] border-t-2 border-black border-solid font-medium text-md">
+        <footer className="w-full h-[10vh] xs:hidden border-t-2 border-black border-solid font-medium text-md">
             <HomeLayout className="py-6 flex items-center justify-between">
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
                 <div className="flex items-center gap-1">

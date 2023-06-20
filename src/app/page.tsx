@@ -10,10 +10,10 @@ import HireMe from './components/HireMe'
 export default function Home() {
 
   return (
-    <main className="flex w-full h-[90vh] items-center">
-      <HomeLayout className='pt-0'>
-        <div className="flex items-center justify-between w-full">
-          <div className='w-[45%] py-10'>
+    <main className="flex w-full h-[90vh] xs:h-full items-center">
+      <HomeLayout className='pt-0 xs:w-full'>
+        <div className="flex items-center justify-between w-full xs:flex-col">
+          <div className='w-[45%] xs:w-[90vw] py-10'>
             <Image
               width={600}
               height={600}
@@ -22,9 +22,9 @@ export default function Home() {
               className='w-full h-auto rounded-full border border-slate-500'
             />
           </div>
-          <div className='w-[45%] flex flex-col items-center self-center'>
-            <AnimatedText text={"Bridging the Gap between Visionary Ideas and Technological Realities."} className='text-4xl text-left' />
-            <p className='my-3 text-base font-medium'>
+          <div className='w-[45%] xs:w-[90vw] flex flex-col items-center self-center'>
+            <AnimatedText text={"Bridging the Gap between Visionary Ideas and Technological Realities."} className='text-4xl text-left xs:text-2xl xs:w-full' />
+            <p className='my-3 text-base font-medium xs:text-lg'>
               Transforming ideas into cutting-edge web applications with expertise in React.js and full-stack web development. Dive into my latest projects and witness innovation in action.
             </p>
             <div className='flex items-center self-start mt-2'>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </HomeLayout>
       <HireMe />
-        <Bulb className='absolute bottom-6 right-6 text-[8vw] hover:brightness-125 cursor-pointer flickering'/>
+        <Bulb className='absolute bottom-6 right-6 xs:hidden text-[8vw] hover:brightness-125 cursor-pointer flickering'/>
     </main>
   )
 }

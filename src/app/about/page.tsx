@@ -35,11 +35,11 @@ const AnimatedNumbers: React.FC<TSXProps> = ({ value }) => {
 
 const About = () => {
     return (
-        <main className="flex w-full flex-col items-center justify-center h-[90vh] px-6">
-            <AnimatedText text="Passion Fuels Purpose!" className="text-5xl" />
-            <div className="grid w-full grid-cols-9 px-5 gap-6 pb-4 pt-6">
-                <div className="col-span-4 flex flex-col items-start justify-start">
-                    <h2 className="mb-4 text-xl font-gold uppercase text-black/75">Biography</h2>
+        <main className="flex w-full flex-col items-center justify-center h-[90vh] xs:w-[90vw] xs:h-full xs:mt-10 px-6">
+            <AnimatedText text="Passion Fuels Purpose!" className="text-5xl xs:text-3xl" />
+            <div className="grid w-full xs:flex xs:flex-col xs:text-center grid-cols-9 px-5 gap-6 pb-4 pt-6">
+                <div className="col-span-4 flex flex-col items-start justify-start xs:items-center">
+                    <h2 className="mb-4 text-xl xs:w-[90vw] font-gold uppercase text-black/75">Biography</h2>
                     <p className="font-medium">
                         Hello, I am Brendan, a full-stack web developer and frontend-focused software engineer. I specialize in crafting beautiful, functional, and user-centered digital experiences.
                     </p>
@@ -54,7 +54,7 @@ const About = () => {
                     <div className="absolute top-0 -right-2.5 -z-10 w-[102%] h-[103%] rounded-[1rem] bg-slate-800"/>
                     <Image src={'/about.jpg'} width={500} height={500} alt="about photo" className="w-full h-auto rounded-xl"/>
                 </div>
-                <div className="col-span-2 flex flex-col items-end justify-between">
+                <div className="col-span-2 flex flex-col items-end justify-between xs:pb-10">
                     <div className="flex flex-col items-end justify-center">
                         <span className="inline-block text-5xl font-bold">
                             <AnimatedNumbers value={1000}/>+

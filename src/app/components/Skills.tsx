@@ -113,8 +113,8 @@ const options = {
 const Skills = () => {
 
     return (
-        <div className='h-full w-full '>
-            <AnimatedText text={"Skill Sets"} className='text-5xl text-center' />
+        <div className='h-full xs:w-[100vw] xs:px-2 xs:h-[400px] w-full'>
+            <AnimatedText text={"Skill Sets"} className='text-5xl text-center xs:text-3xl' />
             <BarChart data={data} options={options} />
         </div>
     )

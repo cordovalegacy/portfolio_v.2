@@ -70,8 +70,8 @@ const Nav = () => {
     }
 
     return (
-        <header className="w-full h-[10vh] px-32 py-8 font-medium flex justify-between items-center">
-            <button className="flex-col absolute left-4 justify-center items-center hidden lg:flex" onClick={clickHandler}>
+        <header className="w-full relative h-[10vh] px-32 py-8 font-medium flex justify-between items-center">
+            <button className="flex-col absolute left-6 justify-center items-center hidden lg:flex" onClick={clickHandler}>
                 <span className={`${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'} bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm`}></span>
                 <span className={`${isOpen ? 'opacity-0' : 'opacity-100'} bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5`}></span>
                 <span className={`${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'} transition-all duration-300 ease-out bg-black block h-0.5 w-6 rounded-sm`}></span>
@@ -81,29 +81,29 @@ const Nav = () => {
                 isOpen
                     ? <div className="w-full min-w-[70vw] flex-col flex fixed justify-between items-center z-30 top-1/2 left-1/2 -translate-x-1/2 bg-black/90 dark:bg-white/90 rounded-lg backdrop-blur-md py-32 -translate-y-1/2">
                         <nav className="flex flex-col gap-2 items-center justify-center mx-auto">
-                            <CustomMobileLink href='/' title="Home" className="" toggle={clickHandler} />
-                            <CustomMobileLink href={'/about'} title="About" className="" toggle={clickHandler} />
-                            <CustomMobileLink href={'/projects'} title="Projects" className="" toggle={clickHandler} />
-                            <CustomMobileLink href={'/experience'} title="Experience" className="" toggle={clickHandler} />
+                            <CustomMobileLink href='/' title="Home" className="text-2xl" toggle={clickHandler} />
+                            <CustomMobileLink href={'/about'} title="About" className="text-2xl" toggle={clickHandler} />
+                            <CustomMobileLink href={'/projects'} title="Projects" className="text-2xl" toggle={clickHandler} />
+                            <CustomMobileLink href={'/experience'} title="Experience" className="text-2xl" toggle={clickHandler} />
                         </nav>
-                        <nav className="flex gap-4 mt-4 items-center justify-center flex-wrap">
+                        <nav className="flex gap-4 mt-8 items-center justify-center flex-wrap">
                             <motion.a
                                 href="https://github.com/cordovalegacy"
                                 whileHover={{ y: -4, scale: 1.3 }}
                                 whileTap={{ scale: 2.0 }}
-                            ><GitHub className="text-xl hover:text-white hover:bg-slate-800 hover:outline hover:brightness-150 rounded-full transition duration-150" />
+                            ><GitHub className="text-3xl hover:text-white hover:bg-slate-800 hover:outline hover:brightness-150 rounded-full transition duration-150" />
                             </motion.a>
                             <motion.a
                                 href="https://www.linkedin.com/in/brendan-cordova-2874011ba/"
                                 whileHover={{ y: -4, scale: 1.3 }}
                                 whileTap={{ scale: 2.0 }}
-                            ><LinkedIn className="text-xl hover:text-blue-600 transition duration-300 rounded" />
+                            ><LinkedIn className="text-3xl hover:text-blue-600 transition duration-300 rounded" />
                             </motion.a>
                             <motion.a
                                 href="https://www.instagram.com/legacybuildspc/"
                                 whileHover={{ y: -4, scale: 1.3 }}
                                 whileTap={{ scale: 2.0 }}
-                            ><Insta className="text-2xl hover:text-pink-700 transition duration-300 rounded-lg" />
+                            ><Insta className="text-4xl hover:text-pink-700 transition duration-300 rounded-lg" />
                             </motion.a>
                         </nav>
                     </div>
@@ -143,7 +143,7 @@ const Nav = () => {
                 </nav>
             </div>
 
-            <nav className="absolute left-[50%] top-2 translate-x-[-50%]">
+            <nav className="absolute left-1/2 top-2 -translate-x-1/2 xs:right-2 xs:-translate-x-4">
                 <Logo />
             </nav>
 

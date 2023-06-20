@@ -9,7 +9,7 @@ export const metadata = {
   title: "Brendan Cordova's Portfolio",
   description: 'Stunning portfolio by Brendan Cordova',
   icons: {
-    icon: "/next.svg"
+    icon: "/profile_portfolio.svg"
   }
 }
 
