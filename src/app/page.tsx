@@ -27,14 +27,14 @@ export default function Home() {
             <p className='my-3 text-base font-medium xs:text-lg'>
               Transforming ideas into cutting-edge web applications with expertise in React.js and full-stack web development. Dive into my latest projects and witness innovation in action.
             </p>
-            <div className='flex items-center self-start mt-2'>
+            <div className='flex xs:w-fit items-center self-start mt-2'>
               {/* target attribute (_blank) lets us open new tab */}
               <Link
-                className='flex hover:-translate-y-1 items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border border-solid border-transparent hover:border-black transition duration-200'
-                href={'/Resume_July.pdf'}
+                className='flex xs:justify-start xs:gap-4 xs:w-fit hover:-translate-y-1 items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border border-solid border-transparent hover:border-black transition duration-200'
+                href={'/Resume_August.pdf'}
                 target={"_blank"}
                 download={true}
-              >Resume <Download className='pl-2 w-full transform transition-transform duration-300 hover:translate-x-1 hover:-translate-y-1' /></Link>
+              >Resume <Download className='pl-2 xs:w-fit w-full transform transition-transform duration-300 hover:translate-x-1 hover:-translate-y-1' /></Link>
               <Link
                 className='ml-4 text-lg font-medium capitalize hover:text-gray-700 hover:-translate-y-1 transition duration-300 text-black underline underline-offset-2 decoration-2 decoration-gray-700'
                 href={'mailto:cordovalegacy19@gmail.com'}
