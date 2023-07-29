@@ -41,13 +41,13 @@ const About = () => {
                 <div className="col-span-4 flex flex-col items-start justify-start xs:items-center">
                     <h2 className="mb-4 text-xl xs:w-[90vw] font-gold uppercase text-black/75">Biography</h2>
                     <p className="font-medium">
-                        Hello, I am Brendan, a full-stack web developer and frontend-focused software engineer. I specialize in crafting beautiful, functional, and user-centered digital experiences.
+                        Hello, I am Brendan, a Lead Frontend Developer with a focus on Full Stack Development. I specialize in crafting beautiful, functional, and user-centered digital experiences.
                     </p>
                     <p className="font-medium">
-                        Design is the art of problem-solving and crafting intuitive, delightful user experiences. My number one goal is to shape solutions that go beyond beauty and dedicate myself to produce practical applications that are intuitive and fun to use.
+                        Design is the art of problem-solving and crafting intuitive, delightful user experiences. My firm belief is balancing functional UX with beautiful UI. My number one goal as a developer is to shape solutions that go beyond beauty and dedicate myself to produce practical applications that are intuitive and fun to use.
                     </p>
                     <p className="font-medium">
-                        From websites to robust tooling apps, I deliver design excellence and user-centric solutions. We should collaborate on your next digital venture!
+                        From websites, to chat applications; video streaming, to robust tooling apps; I deliver excellent design and user-centric solutions. We should collaborate on your next digital venture!
                     </p>
                 </div>
                 <div className="col-span-3 mt-12 relative h-max rounded-2xl border-2 border-solid border-slate-800">
@@ -57,7 +57,7 @@ const About = () => {
                 <div className="col-span-2 flex flex-col items-end justify-between xs:pb-10">
                     <div className="flex flex-col items-end justify-center">
                         <span className="inline-block text-5xl font-bold">
-                            <AnimatedNumbers value={1000}/>+
+                            <AnimatedNumbers value={1300}/>+
                         </span>
                         <h2 className="text-xl font-medium text-dark/75 text-right">GitHub Contributions</h2>
                     </div>

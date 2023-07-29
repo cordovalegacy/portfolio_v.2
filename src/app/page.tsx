@@ -31,7 +31,7 @@ export default function Home() {
               {/* target attribute (_blank) lets us open new tab */}
               <Link
                 className='flex xs:max-w-[150px] hover:-translate-y-1 items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border border-solid border-transparent hover:border-black transition duration-200'
-                href={'/Resume_August.pdf'}
+                href={'/Resume_Cordova_8.pdf'}
                 target={"_blank"}
                 download={true}
               >Resume <Download className='pl-2 w-full transform transition-transform duration-300 hover:translate-x-1 hover:-translate-y-1' /></Link>
