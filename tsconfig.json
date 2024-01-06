@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/BarChart.jsx", "src/app/components/Nav.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/experience/BarChart.tsx", "src/components/global/Nav.tsx"],
   "exclude": ["node_modules"]
 }

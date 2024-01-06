@@ -1,7 +1,11 @@
-import Footer from './components/Footer'
-import Nav from './components/Nav'
-import './globals.css'
-import { Montserrat } from 'next/font/google' //fonts
+
+// !Packages
+import '@/styles/globals.css'
+import { Montserrat } from 'next/font/google'
+
+// !Components
+import Nav from '../components/global/Nav'
+import Footer from '../components/global/Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: "--font-mont" }) //font optimization
 
@@ -13,12 +17,12 @@ export const metadata = {
   }
 }
 
-export const log = console.log.bind(console)  //short hand console.log
+export const log = console.log.bind(console)
 
 export default function RootLayout({
-  children, //these are the props
+  children,
 }: {
-  children: React.ReactNode //these are the props type
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">

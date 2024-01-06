@@ -1,5 +1,5 @@
 "use client"
-import Skills from "../components/Skills"
+import Skills from "../../components/experience/Skills"
 
 
 

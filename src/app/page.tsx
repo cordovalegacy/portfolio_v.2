@@ -1,11 +1,14 @@
-import Image from 'next/image'
-import HomeLayout from './components/Layout'
-import AnimatedText from './components/AnimatedText'
-import Link from 'next/link'
-import { BsArrowUpRightSquare as Download } from 'react-icons/bs'
-import { FcIdea as Bulb } from 'react-icons/fc'
-import HireMe from './components/HireMe'
 
+// !Packages
+import Link from 'next/link'
+import Image from 'next/image'
+import { FcIdea as Bulb } from 'react-icons/fc'
+import { BsArrowUpRightSquare as Download } from 'react-icons/bs'
+
+// !Components
+import HireMe from '../components/home/HireMe'
+import HomeLayout from '../components/global/Layout'
+import AnimatedText from '../components/global/AnimatedText'
 
 export default function Home() {
 
@@ -13,7 +16,7 @@ export default function Home() {
     <main className="flex w-full h-[90vh] xs:h-full items-center">
       <HomeLayout className='pt-0 xs:w-full'>
         <div className="flex items-center justify-between w-full xs:flex-col">
-          <div className='w-[45%] xs:w-[90vw] py-10'>
+          <div className='w-[40%] xs:w-[90vw] py-10 ml-[5%]'>
             <Image
               width={600}
               height={600}
@@ -23,15 +26,14 @@ export default function Home() {
             />
           </div>
           <div className='w-[45%] xs:w-[90vw] flex flex-col items-center self-center'>
-            <AnimatedText text={"Bridging the Gap between Visionary Ideas and Technological Realities."} className='text-4xl text-left xs:text-2xl xs:w-full' />
+            <AnimatedText text={"Bridging the Gap between Visionary Ideas and Technological Realities."} className='text-4xl text-left xs:text-2xl xs:w-full text-slate-700' />
             <p className='my-3 text-base font-medium xs:text-lg'>
-              Transforming ideas into cutting-edge web applications with expertise in React.js and full-stack web development. Dive into my latest projects and witness innovation in action.
+              Transforming ideas into cutting-edge web applications with expertise in full-stack web and mobile development. Dive into my latest projects and witness innovation in action.
             </p>
             <div className='flex items-center self-start mt-2 xs:max-w-[75%]'>
-              {/* target attribute (_blank) lets us open new tab */}
               <Link
                 className='flex xs:max-w-[150px] hover:-translate-y-1 items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border border-solid border-transparent hover:border-black transition duration-200'
-                href={'/Resume_Cordova_8.pdf'}
+                href={'/Resume_Cordova_1.pdf'}
                 target={"_blank"}
                 download={true}
               >Resume <Download className='pl-2 w-full transform transition-transform duration-300 hover:translate-x-1 hover:-translate-y-1' /></Link>
@@ -44,7 +46,7 @@ export default function Home() {
         </div>
       </HomeLayout>
       <HireMe />
-        <Bulb className='absolute bottom-6 right-6 xs:hidden text-[8vw] hover:brightness-125 cursor-pointer flickering'/>
+      <Bulb className='absolute bottom-6 right-6 xs:hidden text-[8vw] hover:brightness-125 cursor-pointer flickering' />
     </main>
   )
 }

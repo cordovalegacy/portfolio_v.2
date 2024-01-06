@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.flickering {
+    animation: flickerAnimation 0.7s infinite;
+}
+
+.canvas{
+    width: 1000px;
+}
+
+.canvas img{
+    width: 100%;
+}
